@@ -244,6 +244,18 @@ function showQuests(year, skillCategory) {
 
     filteredQuests.forEach(quest => {
         const questDiv = document.createElement('div');
+        questDiv.className = 'quest-item';
+
+        // Generate links HTML
+        let linksHtml = '';
+        if (quest.links && Array.isArray(quest.links)) {
+            quest.links.forEach(link => {
+                linksHtml += `<a href="${link.url}" target="_blank">${link.name}</a><br>`;
+            });
+        } else if (quest.url) {
+            linksHtml = `<a href="${quest.url}" target="_blank">Learn More</a>`;
+        }
+
         questDiv.innerHTML = `
             <img src="${quest.imageUrl}" alt="${quest.title} image" class="task-image" style="width: 100px; height: auto; margin-right: 20px; float: left;">
             <h4>${quest.title}</h4>
@@ -251,12 +263,14 @@ function showQuests(year, skillCategory) {
             <p>${quest.description}</p>
             <p><strong>Skills Developed:</strong> ${quest.skillTree}</p>
             <p><strong>Why it's Important:</strong> ${quest.reason}</p>
+            <div>${linksHtml}</div>
             <button onclick="openModal('${quest.title}')">Mark as Completed</button>
             <div style="clear: both;"></div>
         `;
         questArea.appendChild(questDiv);
     });
 }
+
 
 // Display skill icons for selection
 function showSkillIcons() {
