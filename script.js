@@ -7,7 +7,7 @@ const quests = {
             skillTree: "Leadership & Teamwork",
             reason: "Volunteering shows commitment to your community and your field. It can provide hands-on experience in scientific or healthcare settings.",
             url: "https://www.aston.ac.uk/careers/get-experience/part-time-jobs-and-volunteering",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image1.jpg", //volunteer
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image1.jpg", //volunteer
             year: 1
         },
         {
@@ -17,7 +17,7 @@ const quests = {
             skillTree: "Leadership & Teamwork",
             reason: "Work experience, even if not directly related to biochemistry, develops professional skills and demonstrates responsibility and time management.",
             url: "https://www.aston.ac.uk/careers/get-experience/part-time-jobs-and-volunteering",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image2.jpg", //pt job
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image2.jpg", //pt job
             year: 1
         },
 
@@ -28,7 +28,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "Getting to know what the team has to offer in terms of your future is a must!",
             url: "https://www.aston.ac.uk/careers/contact-us",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image12.jpg", //personal project
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image12.jpg", //personal project
             year: 1
         },
              
@@ -40,7 +40,7 @@ const quests = {
             skillTree: "Leadership & Teamwork",
             reason: "Personal projects showcase your initiative, creativity, and genuine interest in biochemistry beyond coursework.",
             url: "https://astonfutures.aston.ac.uk/",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image3.jpg", //personal project
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image3.jpg", //personal project
             year: 1
         },
         {
@@ -53,7 +53,7 @@ const quests = {
                 { name: "Aston Clubs and Societies", url: "https://www.astonsu.com/activities/clubsandsocieties/" },
                 { name: "Biochemical Society", url: "https://www.biochemistry.org/" }
             ],
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image4.jpg", //societies
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image4.jpg", //societies
             year: 1
         },
 
@@ -64,7 +64,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "Many of the big employers have applications in October in your second year, fortune favours the best prepared ",
             url: "https://www.aston.ac.uk/careers/placements",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image7.jpg", //personal project
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image7.jpg", //personal project
             year: 1
         }, 
         
@@ -75,7 +75,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "What motivates you? Where do your strengths lie? What’s your personality type? The careers and placements team's resources can help you answer these questions and more so that you can identify the careers that you’re most likely to succeed in and enjoy. ",
             url: "https://www.aston.ac.uk/careers/which-career/explore-your-options",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image13.jpg", //personal project
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image13.jpg", //personal project
             year: 1
         }, 
         
@@ -88,7 +88,7 @@ const quests = {
             skillTree: "Academic Excellence",
             reason: "These activities help you present yourself more effectively to potential employers.",
             url: "https://www.youtube.com/@astonoriginals/videos",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image5.jpg", //prof develop
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image5.jpg", //prof develop
             year: 1
         },
 
@@ -99,7 +99,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "These activities help you present yourself more effectively to potential employers.",
             url: "https://www.aston.ac.uk/careers/cv/psychometric-testing-and-assessment-centres",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image14.jpg", //prof develop
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image14.jpg", //prof develop
             year: 1
         },
 
@@ -110,7 +110,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "These activities help you present yourself more effectively to potential employers.",
             url: "https://open.spotify.com/episode/6ZpVkF69yhvKVIgXLEG1RS?go=1&sp_cid=5df2047112549f4a26a0823bacc37db7&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=9b01fe069b91443d",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image15.jpg", //prof develop
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image15.jpg", //prof develop
             year: 1
         }
 
@@ -126,7 +126,7 @@ const quests = {
             skillTree: "Professional Skills",
             reason: "This meeting helps you understand the placement process and align your career goals.",
             url: "https://www.aston.ac.uk/careers/contact-us",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image6.jpg", //placement coord
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image6.jpg", //placement coord
             year: 2
         },
         {
@@ -136,7 +136,7 @@ const quests = {
             skillTree: "Professional Skills",
             reason: "These workshops provide essential information and skills for securing and succeeding in your placement.",
             url: "https://www.aston.ac.uk/careers/placements",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image7.jpg", //Placement workshops
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image7.jpg", //Placement workshops
             year: 2
         },
         {
@@ -146,7 +146,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "Career fairs provide opportunities to make connections with potential employers.",
             url: "https://www.aston.ac.uk/careers/find-a-job/researching-employers",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image8.jpg", //Careers fare
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image8.jpg", //Careers fare
             year: 2
         }
     ],
@@ -158,7 +158,7 @@ const quests = {
             skillTree: "Professional Skills",
             reason: "Applying for graduate programmes helps you transition from university to professional life.",
             url: "https://www.aston.ac.uk/careers/find-a-job/researching-employers",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image9.jpg", //grad schemes
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image9.jpg", //grad schemes
             year: 4
         },
         {
@@ -168,7 +168,7 @@ const quests = {
             skillTree: "Professional Skills",
             reason: "Career consultants provide valuable guidance on your career path and job search strategies.",
             url: "https://www.aston.ac.uk/careers/contact-us",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image6.jpg", //placement coord
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image6.jpg", //placement coord
             year: 4
         },
         {
@@ -178,7 +178,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "Alumni connections can provide insights into different career paths and potential job opportunities.",
             url: "https://www.aston.ac.uk/careers/cv/cvs-and-cover-letters",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image10.jpg", //allumnus
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image10.jpg", //allumnus
             year: 4
         }
     ],
@@ -194,7 +194,7 @@ const quests = {
                 { name: "Skills need improving", url: "https://www.aston.ac.uk/current-students/support-services/disability-support/resources" },
                 { name: "Polishing overall skills", url: "https://www.aston.ac.uk/current-students/learning-development-centre/academic-writing-and-study-support" }
             ],
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image11.jpg", //skills develop
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image11.jpg", //skills develop
             year: "anytime"
         },
         {
@@ -204,7 +204,7 @@ const quests = {
             skillTree: "Networking & Communication",
             reason: "A strong professional online presence showcases your seriousness about your career.",
             url: "https://www.aston.ac.uk/careers/cv/cvs-and-cover-letters",
-            imageUrl: "https://raw.githubusercontent.com/simmsj3/CV-builder-4/main/images/image10.jpg", //linkedin
+            imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image10.jpg", //linkedin
             year: "anytime"
         }
     ]
