@@ -4,7 +4,7 @@ const quests = {
             title: "Volunteering",
             type: "Work Experience",
             description: "Get involved in a community project, charity or organisation.",
-            skillTree: "Leadership & Teamwork",
+            skillTree: "leadership-teamwork",
             reason: "Volunteering shows commitment to your community and your field. It can provide hands-on experience in scientific or healthcare settings.",
             url: "https://www.aston.ac.uk/careers/get-experience/part-time-jobs-and-volunteering",
             imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image1.jpg", //volunteer
@@ -14,7 +14,7 @@ const quests = {
             title: "Part-time Job",
             type: "Work Experience",
             description: "Look for part-time job opportunities, either on-campus or off-campus or even explore summer internship possibilities in labs or biotech companies",
-            skillTree: "Leadership & Teamwork",
+            skillTree: "leadership-teamwork",
             reason: "Work experience, even if not directly related to biochemistry, develops professional skills and demonstrates responsibility and time management.",
             url: "https://www.aston.ac.uk/careers/get-experience/part-time-jobs-and-volunteering",
             imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image2.jpg", //pt job
@@ -37,7 +37,7 @@ const quests = {
             title: "Personal Projects",
             type: "Professional Development",
             description: "Start a science blog. Develop a small research project or literature review in an area of interest.",
-            skillTree: "Leadership & Teamwork",
+            skillTree: "leadership-teamwork",
             reason: "Personal projects showcase your initiative, creativity, and genuine interest in biochemistry beyond coursework.",
             url: "https://astonfutures.aston.ac.uk/",
             imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image3.jpg", //personal project
