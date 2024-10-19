@@ -1340,3 +1340,4 @@ function updateLevelAndBadges() {
     document.getElementById('level-display').innerText = `Level: ${level}`;
     document.getElementById('points-display').innerText = `Total Points: ${userPoints}`;
 }
+
