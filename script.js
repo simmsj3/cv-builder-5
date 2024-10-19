@@ -1243,12 +1243,8 @@ function calculateSkillProgress() {
 // Generate skill progress charts using Chart.js
 function generateSkillProgressCharts() {
     const skillCounts = calculateSkillProgress();
-    const skillsContent = document.getElementById('skills-content');
-    skillsContent.innerHTML = '';
-
-    const canvas = document.createElement('canvas');
-    canvas.id = 'skillProgressChart';
-    skillsContent.appendChild(canvas);
+    const canvas = document.getElementById('skillProgressChart');
+    if (!canvas) return; // Exit if the canvas doesn't exist
 
     const ctx = canvas.getContext('2d');
     new Chart(ctx, {
@@ -1300,6 +1296,7 @@ function generateSkillProgressCharts() {
     // Show the skills progress area
     document.getElementById('skills-progress-area').style.display = 'block';
 }
+
 
 // Event listeners for year selection
 document.getElementById('year1-btn').addEventListener('click', () => {
