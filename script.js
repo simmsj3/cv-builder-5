@@ -1032,7 +1032,30 @@ const quests = {
 let completedQuests = JSON.parse(localStorage.getItem('completedQuests')) || {};
 let skillsProgress = JSON.parse(localStorage.getItem('skillsProgress')) || [];
 let incompleteQuests = JSON.parse(localStorage.getItem('incompleteQuests')) || {};
+let userPoints = JSON.parse(localStorage.getItem('userPoints')) || 0;
 let currentYear = 'year1';
+
+// Points map for each quest
+const pointsMap = {
+    "Volunteering": 50,
+    "Part-time Job": 60,
+    "Meet the Careers and Placements team": 40,
+    "Personal Projects": 40,
+    "Join a society or sports club": 20,
+    "You can never start too early with placements": 30,
+    "What are your options": 30,
+    "Attend events, workshops, or external talks": 40,
+    "Over the Summer": 30,
+    "Prefer something to listen to?": 20,
+    "Meet with Placement Coordinator": 80,
+    "Attend All Placement Workshops": 70,
+    "Attend The Big Careers Fair": 100,
+    "Apply for Graduate Programmes": 70,
+    "Meet with Careers Consultant": 60,
+    "Connect with Alumni": 50,
+    "Develop your skills": 40,
+    "Set up a LinkedIn profile": 40
+};
 
 // Function to display quests based on selected year and skill category
 function showQuests(year, skillCategory) {
@@ -1088,7 +1111,6 @@ function showQuests(year, skillCategory) {
         questArea.appendChild(questDiv);
     });
 }
-
 
 // Display skill icons for selection
 function showSkillIcons() {
@@ -1163,6 +1185,10 @@ function completeQuest(questTitle) {
         evidence: document.getElementById(`evidence-${skill}`) ? document.getElementById(`evidence-${skill}`).value : ""
     }));
 
+    const points = getQuestPoints(questTitle);
+    userPoints += points;
+    localStorage.setItem('userPoints', JSON.stringify(userPoints));
+
     if (!completedQuests[questTitle]) {
         completedQuests[questTitle] = [];
     }
@@ -1175,8 +1201,10 @@ function completeQuest(questTitle) {
 
     localStorage.setItem('completedQuests', JSON.stringify(completedQuests));
     updateSkillsProgress(skillsSelected, evidence);
+    alert(`You've earned ${points} points for completing "${questTitle}"! Total points: ${userPoints}`);
     modal.style.display = "none";
     showQuests(currentYear); // Refresh the quest list
+    updateLevelAndBadges(); // Update level and badges after completing the quest
 }
 
 // Update skill progress based on completed quests
@@ -1292,4 +1320,23 @@ document.getElementById('skills-tab-btn').addEventListener('click', generateSkil
 // Initialize the default view
 window.onload = function() {
     showSkillIcons();
+    updateLevelAndBadges(); // Display current user level
 };
+
+// Get points for a specific quest
+function getQuestPoints(questTitle) {
+    return pointsMap[questTitle] || 20; // Default to 20 points if the quest isn't in the map
+}
+
+function updateLevelAndBadges() {
+    let level = "Beginner";
+    if (userPoints > 800) {
+        level = "Placement Ready";
+    } else if (userPoints > 500) {
+        level = "Advanced";
+    } else if (userPoints > 200) {
+        level = "Intermediate";
+    }
+    document.getElementById('level-display').innerText = `Level: ${level}`;
+}
+
