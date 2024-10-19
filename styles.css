@@ -1,238 +1,111 @@
-/* General Styling */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
     padding: 20px;
-}
-
-h1 {
-    color: #007BFF;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.6;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    margin-bottom: 20px;
-}
-
-/* Navigation Buttons */
-nav {
     text-align: center;
     margin-bottom: 20px;
 }
 
-nav button {
-    background-color: #007BFF;
+h1 {
+    color: #007bff;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
     border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
 }
 
-nav button:hover {
+button:hover {
     background-color: #0056b3;
-}
-
-nav button:focus {
-    outline: none;
-}
-
-/* Skills Icon Section */
-#skills-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 20px;
 }
 
 .skill-icon {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
+    display: inline-block;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    width: 120px;
-}
-
-.skill-icon img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .skill-icon:hover {
-    transform: scale(1.05);
+    background-color: #e0f7fa;
+    transform: translateY(-3px);
 }
 
-.skill-icon p {
-    font-size: 0.9rem;
-    margin: 0;
-    color: #007BFF;
+.skill-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
-/* Quest Area */
-#quest-area {
-    background: white;
-    border-radius: 10px;
+.quest-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.task-image {
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#quest-area h4 {
-    font-size: 1.1rem;
-    margin-top: 0;
-    color: #333;
-}
-
-#quest-area p {
-    margin: 5px 0;
-}
-
-#quest-area button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#quest-area button:hover {
-    background-color: #218838;
-}
-
-/* Skills Progress Area */
-#skills-progress-area {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-#skills-progress-area h3 {
-    text-align: center;
-    color: #007BFF;
-    margin-bottom: 20px;
-}
-
-#skills-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    background: white;
-    margin: 10% auto;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     max-width: 500px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-content h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.modal-content label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-.modal-content input[type="date"],
-.modal-content textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.modal-content button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.modal-content button:hover {
-    background-color: #0056b3;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #aaa;
+    float: right;
     cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 20px;
 }
 
-.close:hover {
-    color: #333;
+#skills-progress-area {
+    text-align: center;
+    padding: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #skills-icons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-icon {
-        width: 90%;
-    }
-
-    .modal-content {
-        width: 90%;
-    }
+canvas {
+    max-width: 100%;
+    height: auto;
 }
