@@ -1245,15 +1245,29 @@ function calculateSkillProgress() {
 function generateSkillProgressCharts() {
     const skillCounts = calculateSkillProgress();
     const skillsContent = document.getElementById('skills-content');
+
+    // Ensure that skillsContent exists before proceeding
+    if (!skillsContent) {
+        console.error('The element #skills-content is missing.');
+        return;
+    }
+
+    // Clear any existing content in the skillsContent area
     skillsContent.innerHTML = '';
 
-    const canvas = document.getElementById('skillProgressChart');
-    const ctx = canvas.getContext('2d');
-    
-    // Destroy any existing chart instance to avoid overlapping
-    if (window.skillChart) window.skillChart.destroy();
+    // Create a canvas element for the chart
+    const canvas = document.createElement('canvas');
+    canvas.id = 'skillProgressChart';
+    skillsContent.appendChild(canvas);
 
-    window.skillChart = new Chart(ctx, {
+    // Ensure the canvas is added to the DOM before attempting to access it
+    if (!canvas.getContext) {
+        console.error('Canvas could not be created.');
+        return;
+    }
+
+    const ctx = canvas.getContext('2d');
+    new Chart(ctx, {
         type: 'bar',
         data: {
             labels: Object.keys(skillCounts),
@@ -1299,6 +1313,7 @@ function generateSkillProgressCharts() {
         }
     });
 }
+
 
 // Event listeners for year selection
 document.getElementById('year1-btn').addEventListener('click', () => {
