@@ -14,6 +14,7 @@
             <h1>Biochemistry CV Quest System</h1>
             <p>Select a year and a skill category to view relevant quests:</p>
             <div id="level-display">Level: Beginner</div>
+            <div id="points-display">Total Points: 0</div> <!-- Display total points here -->
         </header>
         
         <!-- Navigation for years -->
@@ -27,36 +28,35 @@
 
         <!-- Skills Categories -->
         <section id="skills-icons" style="display: none;">
-    <div class="skill-icon" data-skill="academic-excellence">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image16.jpg" alt="Academic Excellence" class="skill-image">
-        <p>Academic Excellence</p>
-    </div>
-    <div class="skill-icon" data-skill="professional-skills">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image17.jpg" alt="Professional Skills" class="skill-image">
-        <p>Professional Skills</p>
-    </div>
-    <div class="skill-icon" data-skill="leadership-teamwork">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image18.jpg" alt="Leadership & Teamwork" class="skill-image">
-        <p>Leadership & Teamwork</p>
-    </div>
-    <div class="skill-icon" data-skill="technical-proficiency">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image19.jpg" alt="Technical Proficiency" class="skill-image">
-        <p>Technical Proficiency</p>
-    </div>
-    <div class="skill-icon" data-skill="networking-communication">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image20.jpg" alt="Networking & Communication" class="skill-image">
-        <p>Networking & Communication</p>
-    </div>
-    <div class="skill-icon" data-skill="placement-preparation">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image21.jpg" alt="Placement Preparation" class="skill-image">
-        <p>Placement Preparation</p>
-    </div>
-    <div class="skill-icon" data-skill="graduate-employment">
-        <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image22.jpg" alt="Graduate Employment" class="skill-image">
-        <p>Graduate Employment</p>
-    </div>
-</section>
-
+            <div class="skill-icon" data-skill="academic-excellence">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image16.jpg" alt="Academic Excellence" class="skill-image">
+                <p>Academic Excellence</p>
+            </div>
+            <div class="skill-icon" data-skill="professional-skills">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image17.jpg" alt="Professional Skills" class="skill-image">
+                <p>Professional Skills</p>
+            </div>
+            <div class="skill-icon" data-skill="leadership-teamwork">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image18.jpg" alt="Leadership & Teamwork" class="skill-image">
+                <p>Leadership & Teamwork</p>
+            </div>
+            <div class="skill-icon" data-skill="technical-proficiency">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image19.jpg" alt="Technical Proficiency" class="skill-image">
+                <p>Technical Proficiency</p>
+            </div>
+            <div class="skill-icon" data-skill="networking-communication">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image20.jpg" alt="Networking & Communication" class="skill-image">
+                <p>Networking & Communication</p>
+            </div>
+            <div class="skill-icon" data-skill="placement-preparation">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image21.jpg" alt="Placement Preparation" class="skill-image">
+                <p>Placement Preparation</p>
+            </div>
+            <div class="skill-icon" data-skill="graduate-employment">
+                <img src="https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image22.jpg" alt="Graduate Employment" class="skill-image">
+                <p>Graduate Employment</p>
+            </div>
+        </section>
 
         <!-- Main content area for quests -->
         <main>
@@ -68,6 +68,7 @@
                 <div id="skills-content">
                     <!-- Skills progress will be dynamically added here -->
                 </div>
+                <canvas id="skills-bar-chart"></canvas> <!-- Canvas for bar chart -->
             </section>
         </main>
 
