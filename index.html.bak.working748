@@ -4,32 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biochemistry CV Quest System</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        /* Inline critical styles to prevent FOUC */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .skill-icon img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -37,7 +14,7 @@
             <h1>Biochemistry CV Quest System</h1>
             <p>Select a year and a skill category to view relevant quests:</p>
             <div id="level-display">Level: Beginner</div>
-            <div id="points-display">Total Points: 0</div>
+            <div id="points-display">Total Points: 100</div>
         </header>
         
         <!-- Navigation for years -->
@@ -75,9 +52,9 @@
                 <img src="https://raw.githubusercontent.com/simmsj3/CV-builder-5/main/images/image21.jpg" alt="Placement Preparation" class="skill-image">
                 <p>Placement Preparation</p>
             </div>
-            <div class="skill-icon" data-skill="graduate-careers">
-                <img src="https://raw.githubusercontent.com/simmsj3/CV-builder-5/main/images/image22.jpg" alt="Graduate Careers" class="skill-image">
-                <p>Graduate Careers</p>
+            <div class="skill-icon" data-skill="graduate-employment">
+                <img src="https://raw.githubusercontent.com/simmsj3/CV-builder-5/main/images/image22.jpg" alt="Graduate Employment" class="skill-image">
+                <p>Graduate Employment</p>
             </div>
         </section>
 
@@ -89,7 +66,13 @@
             <section id="skills-progress-area" style="display: none;">
                 <h3>Skills Progress</h3>
                 <div id="skills-content">
-                    <!-- Skills progress charts will be dynamically added here -->
+                    <!-- Skills progress and bar chart will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="progress-charts">
+                <div id="overall-score-chart" style="width: 100%; height: 300px;">
+                    <canvas id="skillProgressChart"></canvas>
                 </div>
             </section>
         </main>
