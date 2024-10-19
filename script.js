@@ -1,6 +1,5 @@
 const quests = {
     year1: [
-[
     {
         title: "Community Engagement",
         type: "Experiential Learning",
