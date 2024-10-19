@@ -1116,6 +1116,7 @@ function showQuests(year, skillCategory) {
 function showSkillIcons() {
     document.getElementById('skills-icons').style.display = 'flex';
     document.getElementById('quest-area').style.display = 'none';
+    document.getElementById('skills-progress-area').style.display = 'none';
 }
 
 // Event listener for skill icon clicks
@@ -1246,12 +1247,13 @@ function generateSkillProgressCharts() {
     const skillsContent = document.getElementById('skills-content');
     skillsContent.innerHTML = '';
 
-    const canvas = document.createElement('canvas');
-    canvas.id = 'skillProgressChart';
-    skillsContent.appendChild(canvas);
-
+    const canvas = document.getElementById('skillProgressChart');
     const ctx = canvas.getContext('2d');
-    new Chart(ctx, {
+    
+    // Destroy any existing chart instance to avoid overlapping
+    if (window.skillChart) window.skillChart.destroy();
+
+    window.skillChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: Object.keys(skillCounts),
@@ -1321,6 +1323,7 @@ document.getElementById('skills-tab-btn').addEventListener('click', generateSkil
 window.onload = function() {
     showSkillIcons();
     updateLevelAndBadges(); // Display current user level
+    generateSkillProgressCharts(); // Generate the chart on page load
 };
 
 // Get points for a specific quest
@@ -1340,4 +1343,5 @@ function updateLevelAndBadges() {
     document.getElementById('level-display').innerText = `Level: ${level}`;
     document.getElementById('points-display').innerText = `Total Points: ${userPoints}`;
 }
+
 
