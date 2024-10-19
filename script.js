@@ -1116,7 +1116,6 @@ function showQuests(year, skillCategory) {
 function showSkillIcons() {
     document.getElementById('skills-icons').style.display = 'flex';
     document.getElementById('quest-area').style.display = 'none';
-    document.getElementById('skills-progress-area').style.display = 'none';
 }
 
 // Event listener for skill icon clicks
@@ -1245,26 +1244,11 @@ function calculateSkillProgress() {
 function generateSkillProgressCharts() {
     const skillCounts = calculateSkillProgress();
     const skillsContent = document.getElementById('skills-content');
-
-    // Ensure that skillsContent exists before proceeding
-    if (!skillsContent) {
-        console.error('The element #skills-content is missing.');
-        return;
-    }
-
-    // Clear any existing content in the skillsContent area
     skillsContent.innerHTML = '';
 
-    // Create a canvas element for the chart
     const canvas = document.createElement('canvas');
     canvas.id = 'skillProgressChart';
     skillsContent.appendChild(canvas);
-
-    // Ensure the canvas is added to the DOM before attempting to access it
-    if (!canvas.getContext) {
-        console.error('Canvas could not be created.');
-        return;
-    }
 
     const ctx = canvas.getContext('2d');
     new Chart(ctx, {
@@ -1312,8 +1296,10 @@ function generateSkillProgressCharts() {
             }
         }
     });
-}
 
+    // Show the skills progress area
+    document.getElementById('skills-progress-area').style.display = 'block';
+}
 
 // Event listeners for year selection
 document.getElementById('year1-btn').addEventListener('click', () => {
@@ -1338,7 +1324,6 @@ document.getElementById('skills-tab-btn').addEventListener('click', generateSkil
 window.onload = function() {
     showSkillIcons();
     updateLevelAndBadges(); // Display current user level
-    generateSkillProgressCharts(); // Generate the chart on page load
 };
 
 // Get points for a specific quest
@@ -1358,5 +1343,6 @@ function updateLevelAndBadges() {
     document.getElementById('level-display').innerText = `Level: ${level}`;
     document.getElementById('points-display').innerText = `Total Points: ${userPoints}`;
 }
+
 
 
