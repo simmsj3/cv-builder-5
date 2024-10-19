@@ -802,8 +802,8 @@ const quests = {
         url: "https://www.nature.com/articles/d41586-018-05823-5",
         imageUrl: "https://raw.githubusercontent.com/simmsj3/cv-builder-5/main/images/image20.jpg",
         year: 2
-    }    
-            
+    } 
+        
     ], //keep
     
     year4: [ //keep
